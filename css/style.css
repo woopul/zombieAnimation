@@ -1,0 +1,37 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.zombie_road{
+     position: relative;
+     top: 20vh;
+     width: 100%;
+     height: 312px;
+
+}
+
+.zombie{
+     /*float: right;*/
+     width: 200px;
+     height:312px;
+     background: url("../images/sprite.png") left center;
+     animation: zombieWalk 0.7s infinite 0s  steps(9) ,
+               zombieRoad 4s infinite 0s linear;
+}
+
+@keyframes zombieWalk {
+     100%{ background-position: right}
+}
+
+@keyframes zombieRoad{
+     0%{
+          margin-left: -200px;
+     }
+     100%{ margin-left: 100%}
+}
+
+.animation_paused {
+     animation-play-state: paused;
+}
